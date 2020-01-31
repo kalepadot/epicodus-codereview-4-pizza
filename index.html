@@ -12,12 +12,49 @@
 </head>
 <body>
   <div class="container">
+    <h1>Pizza Parlor</h1>
+
+    <form id="pizza">
+      <p>Crust Option</p>
+        <div class="form-group">
+          <input type="checkbox" name="select-crust" value="glutenFree"> Gluten-Free Crust<br>
+          <input type="checkbox" name="select-crust" id="handTossed"> Hand Tossed <br>
+          <!-- having hand tossed might create error message if both selected -->
+        </div>
+        <p>Select a size<p>
+        <div class="form-group">
+          <input type="checkbox" name="select-size" value="sm">Small 12'<br>
+          <input type="checkbox" name="select-size" value="md">Meduim 16'<br>
+          <input type="checkbox" name="select-size" value="lg">Large 20'<br>
+        </div>
+        <p>Select a base<p>
+          <div class="form-group">
+            <input type="checkbox" name="select-base" value="red">Maranaria<br>
+            <input type="checkbox" name="select-base" value="pesto">Pesto basil<br>
+            <input type="checkbox" name="select-base" value="oil">Oil and garlic<br>
+          </div>
+          <p>Select a cheese<p>
+            <div class="form-group">
+              <input type="checkbox" name="select-cheese" value="vegan">Vegan cheese<br>
+              <input type="checkbox" name="select-cheese" value="mozzarella">Mozzarella cheese<br>
+              <input type="checkbox" name="select-cheese" value="noCheese">No Cheese<br>
+            </div>
+          <p>Select toppings (additional charges may apply)<p>
+            <div class="form-group">
+              <input type="checkbox" name="select-topping" value="pepperoni">Pepperoni<br>
+              <input type="checkbox" name="select-topping" value="ham">Ham<br>
+              <input type="checkbox" name="select-topping" value="groundBeef">Ground beef<br>
+              <input type="checkbox" name="select-topping" value="sausage">Italian Sausage<br>
+              <input type="checkbox" name="select-topping" value="bacon">Bacon<br>
+              <input type="checkbox" name="select-topping" value="anchovie">Anchovies<br>
+              <input type="checkbox" name="select-topping" value="pineapple">Pineapple<br>
+              <input type="checkbox" name="select-topping" value="onion">Onion<br>
+              <input type="checkbox" name="select-topping" value="greenPepper">Green Peppers<br>
+              <input type="checkbox" name="select-topping" value="olive">Black olives<br>
+              <input type="checkbox" name="select-topping" value="mushroom">Mushrooms<br>
+            </div>
 
 
-
-
-
-    
     <!-- end container class below -->
   </div>
 </body>
