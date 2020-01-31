@@ -1,12 +1,10 @@
-# _{Application Name}_
+# _Pizza Parlor_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Epicodus Code Review 4, 'Pizza Parlor' , January 31, 2020_
 
-#### By _**{List of contributors}**_
+#### _**A project by Jeremy Kale Padot**_
 
-## Description
-
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This is a Pizza Parlor website using constructors and prototypes allowing user to select toppings and build a customized pizza. 
 
 ## Setup/Installation Requirements
 
@@ -16,22 +14,32 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * _easy-to-understand_
 * _format_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
+## Specs
+* User selects a pizza size from menu
+  * input: Sm
+  * output: Sm pizza
+* User selects a pizza topping from menu, selection is added to the pizza
+  * input: cheese 
+  * output: Sm cheese
+* User selects additional toppings from menu, selection is added to the pizza
+  * input: pepperoni
+  * output: Sm cheese pepperoni
+  
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+No known bugs at this time. If found, see support and contact section for known bug submission. 
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_For technical support regarding bugs, issues, or comments/feedback, contact: Jeremy Kale Padot jeremy@padot.us_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+__
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+* A project by Jeremy Kale Padot/ Epicodus for educational purposes only
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Jeremy Kale Padot/Epicodus_**
