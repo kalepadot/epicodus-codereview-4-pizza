@@ -30,11 +30,17 @@ Pizza.prototype.getPrice = function() {
 
 function generateOrder() {
   var size = $("input[name=size]:checked").val();
+  var crust = $("input[name=crust]:checked").val();
+  var base = $("input[name=base]:checked").val();
+  var cheese = $("input[name=cheese]:checked").val();
   var toppings = []
   $("input[name=topping]:checked").each(function() {
   toppings.push($(this).val());
+  // $("input[name=crust]:checked").each(function() {
+  //   crust.push($(this).val());
+  // });
   });
-  var myPizza = new Pizza(size, null, null, null, toppings, null);
+  var myPizza = new Pizza(size, crust, base, cheese, toppings, null);
   myPizza.getPrice();
   var price = myPizza.getPrice();
   console.log(price);
@@ -49,7 +55,7 @@ $(document).ready(function(){
     event.preventDefault();
     $("#order").empty();
     var myPizza = generateOrder();
-    $('#order').append( `<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`)
+    $('#order').append(`<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`).append(`<p>Base: ${myPizza.base}</p>`).append(`<p>Cheese: ${myPizza.cheese}</p>`)
     $("#order").text();
   });
 });
