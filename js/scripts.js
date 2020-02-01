@@ -1,34 +1,48 @@
 // Business Logic
 
-function Pizza(size, crust, base, cheese, toppings, method, price) {
-  this.setSize = size;
-  this.setCrust = crust;
-  this.setBase = base;
-  this.setCheese = cheese;
+function Pizza(size, crust, base, cheese, toppings, method) {
+  this.size = size;
+  this.crust = crust;
+  this.base = base;
+  this.cheese = cheese;
   this.toppings = toppings;
   this.method = method;
-  this.price = price;
   console.log(this);
 }
 Pizza.prototype.getPrice = function() {
-  console.log("setSize");
-  console.log(this.setSize);
-  if (this.setSize === "sm") {
-    this.price = 10;
-  } else if (this.setSize === "med") {
-    this.price = 12;
-  } else if (this.setSize === "lg") {
-    this.price = 14;
+   var addCharge = 0;
+  if (this.size === "sm") {
+    addCharge = 10;
+  } else if (this.size === "md") {
+    addCharge = 12;
+  } else if (this.size === "lg") {
+    addCharge = 14;
+  };
+  if (this.crust === "glutenFree") {
+    addCharge += 2;
+  } else if (this.crust === "handtossed") {
+    addCharge +=1;
   }
-  // return this.price;
+  addCharge += this.toppings.length;
+  console.log(this.toppings.length);
+  return addCharge;
 };
-Pizza.prototype.Crust = function() {
-  if (this.setCrust === "glutenFree") {
-    this.price += 1;
-  }
+
+function generateOrder() {
+  var size = $("input[name=size]:checked").val();
+  var toppings = $("input[name=toppings]:checked").toArray().map((el) => el.val())
+  var myPizza = new Pizza(size, null, null, null, toppings, null);
+  myPizza.getPrice();
+  var price = myPizza.getPrice();
+  console.log(price);
 };
+
 console.log(window.location);
-var myPizza = new Pizza("sm", "glutenFree", "pesto", "noCheese", "pepperoni", "delivery");
-console.log(myPizza);
-var Price = myPizza.getPrice();
-console.log("price",myPizza.price);
+
+// User Logic
+$(document).ready(function(){
+  $("form#pizza").submit(function(event) {
+    event.preventDefault();
+    generateOrder();
+  });
+});
