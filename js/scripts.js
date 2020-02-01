@@ -30,11 +30,15 @@ Pizza.prototype.getPrice = function() {
 
 function generateOrder() {
   var size = $("input[name=size]:checked").val();
-  var toppings = $("input[name=toppings]:checked").toArray().map((el) => el.val())
+  var toppings = []
+  $("input[name=topping]:checked").each(function() {
+  toppings.push($(this).val());
+  });
   var myPizza = new Pizza(size, null, null, null, toppings, null);
   myPizza.getPrice();
   var price = myPizza.getPrice();
   console.log(price);
+  return myPizza;
 };
 
 console.log(window.location);
@@ -43,6 +47,9 @@ console.log(window.location);
 $(document).ready(function(){
   $("form#pizza").submit(function(event) {
     event.preventDefault();
-    generateOrder();
+    $("#order").empty();
+    var myPizza = generateOrder();
+    $('#order').append( `<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`)
+    $("#order").text();
   });
 });
