@@ -59,3 +59,5 @@ $(document).ready(function(){
     $("#order").text();
   });
 });
+
+// stopping point: need to finish sending objects to myPizza and output. finish price points for toppings. why are toppings (as an array) not showing in my output. style page
