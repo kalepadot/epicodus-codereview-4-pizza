@@ -68,4 +68,4 @@ $(document).ready(function(){
   });
 });
 
-// need to finish: README.md, price is not showing, style page. If time allows, add user address input for delivery and better display of your order. When order is placed, hide the order form
+// need to finish: README.md setup and tech, price is not showing, style page. If time allows, add user address input for delivery and better display of your order. When order is placed, hide the order form
