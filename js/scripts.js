@@ -53,13 +53,19 @@ console.log(window.location);
 
 // User Logic
 $(document).ready(function(){
+  $("#zah").click(function() {
+    $("form#pizza").show();
+    $("#zah").toggle();
   $("form#pizza").submit(function(event) {
     event.preventDefault();
     $("#order").empty();
+    $("#pizza").toggle();
+    $("#output").show();
     var myPizza = generateOrder();
     $('#order').append(`<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`).append(`<p>Base: ${myPizza.base}</p>`).append(`<p>Cheese: ${myPizza.cheese}</p>`).append(`<p>Toppings: ${myPizza.toppings}</p>`).append(`<p>Method: ${myPizza.method}</p>`).append(`</p>Order Total: ${myPizza.price}<p>`)
     $("#order").text();
+    });
   });
 });
 
-// stopping point: need to finish sending objects to myPizza and output. finish price points for toppings. why are toppings (as an array) not showing in my output. style page
+// need to finish: README.md, price is not showing, style page. If time allows, add user address input for delivery and better display of your order. When order is placed, hide the order form

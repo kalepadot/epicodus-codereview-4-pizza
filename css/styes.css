@@ -1,0 +1,56 @@
+html body {
+  font-family: "Anton";
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: rgb(19, 18, 18);
+}
+h1 {
+  font-family: "Anton";
+  color: whitesmoke;
+  text-align: center;
+  font-size: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+span {
+  color: rgb(214, 5, 5);
+}
+
+.jumbotron {
+  background-color: rgb(19, 18, 18);
+  color: whitesmoke;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+button {
+  margin:10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#output {
+  display: none;
+  text-align: center;
+}
+.col-md-4 {
+  text-align: left;
+}
+
+img {
+  margin: 30px;
+}
+
+#pizza {
+  display: none;
+}
