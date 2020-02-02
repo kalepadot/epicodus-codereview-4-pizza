@@ -1,12 +1,13 @@
 // Business Logic
 
-function Pizza(size, crust, base, cheese, toppings, method) {
+function Pizza(size, crust, base, cheese, toppings, method, price) {
   this.size = size;
   this.crust = crust;
   this.base = base;
   this.cheese = cheese;
   this.toppings = toppings;
   this.method = method;
+  this.price = price;
   console.log(this);
 }
 Pizza.prototype.getPrice = function() {
@@ -33,6 +34,7 @@ function generateOrder() {
   var crust = $("input[name=crust]:checked").val();
   var base = $("input[name=base]:checked").val();
   var cheese = $("input[name=cheese]:checked").val();
+  var method = $("input[name=select-method]:checked").val();
   var toppings = []
   $("input[name=topping]:checked").each(function() {
   toppings.push($(this).val());
@@ -40,7 +42,7 @@ function generateOrder() {
   //   crust.push($(this).val());
   // });
   });
-  var myPizza = new Pizza(size, crust, base, cheese, toppings, null);
+  var myPizza = new Pizza(size, crust, base, cheese, toppings, method, price);
   myPizza.getPrice();
   var price = myPizza.getPrice();
   console.log(price);
@@ -55,7 +57,7 @@ $(document).ready(function(){
     event.preventDefault();
     $("#order").empty();
     var myPizza = generateOrder();
-    $('#order').append(`<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`).append(`<p>Base: ${myPizza.base}</p>`).append(`<p>Cheese: ${myPizza.cheese}</p>`)
+    $('#order').append(`<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`).append(`<p>Base: ${myPizza.base}</p>`).append(`<p>Cheese: ${myPizza.cheese}</p>`).append(`<p>Toppings: ${myPizza.toppings}</p>`).append(`<p>Method: ${myPizza.method}</p>`).append(`</p>Order Total: ${myPizza.price}<p>`)
     $("#order").text();
   });
 });
