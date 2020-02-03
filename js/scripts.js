@@ -43,7 +43,7 @@ function generateOrder() {
   // });
   });
   var myPizza = new Pizza(size, crust, base, cheese, toppings, method, price);
-  myPizza.getPrice();
+  myPizza.getPrice(); //?
   var price = myPizza.getPrice();
   console.log(price);
   return myPizza;
@@ -62,7 +62,7 @@ $(document).ready(function(){
     $("#pizza").toggle();
     $("#output").show();
     var myPizza = generateOrder();
-    $('#order').append(`<p><span>Size:</span> ${myPizza.size}</p>`).append( `<p><span>Crust:</span> ${myPizza.crust}</p>`).append(`<p><span>Base:</span> ${myPizza.base}</p>`).append(`<p><span>Cheese:</span> ${myPizza.cheese}</p>`).append(`<p><span>Toppings:</span> ${myPizza.toppings}</p>`).append(`<p><span>Method:</span> ${myPizza.method}</p>`).append(`</p><span>Order Total:</span> ${myPizza.price}<p>`)
+    $('#order').append(`<p><span>Size:</span> ${myPizza.size}</p>`).append( `<p><span>Crust:</span> ${myPizza.crust}</p>`).append(`<p><span>Base:</span> ${myPizza.base}</p>`).append(`<p><span>Cheese:</span> ${myPizza.cheese}</p>`).append(`<p><span>Toppings:</span> ${myPizza.toppings}</p>`).append(`<p><span>Method:</span> ${myPizza.method}</p>`).append(`</p><span>Order Total:</span>$ ${myPizza.getPrice()}<p>`)
     $("#order").text();
     });
   });
