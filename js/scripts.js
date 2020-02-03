@@ -11,7 +11,7 @@ function Pizza(size, crust, base, cheese, toppings, method, price) {
   console.log(this);
 }
 Pizza.prototype.getPrice = function() {
-   var addCharge = 0;
+  var addCharge = 0;
   if (this.size === "sm") {
     addCharge = 10;
   } else if (this.size === "md") {
@@ -38,9 +38,7 @@ function generateOrder() {
   var toppings = []
   $("input[name=topping]:checked").each(function() {
   toppings.push($(this).val());
-  // $("input[name=crust]:checked").each(function() {
-  //   crust.push($(this).val());
-  // });
+
   });
   var myPizza = new Pizza(size, crust, base, cheese, toppings, method, price);
   myPizza.getPrice(); //?
@@ -68,4 +66,3 @@ $(document).ready(function(){
   });
 });
 
-// need to finish: README.md setup and tech, price is not showing, style page. If time allows, add user address input for delivery and better display of your order. When order is placed, hide the order form

@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap-3.3.7-dist 2/css/bootstrap.css">
-  <link rel="stylesheet" href="css/styes.css">
-  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Ol'ZACHY-BOIS PIZZA</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Ol'ZACHY-BOIS<span>PIZZA</span></h1>
-    <h2>BKLN<span>NY</span></h2>
-    <img class ="center" src="img/zach.JPG" alt="zach">
-    <button id="zah" type="submit"><span>ORDER SOME ZAH</span></button>
-    <form id="pizza">
-      <div class="col-md-4">
-        <p><span>Crust Option</span></p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist 2/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styes.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Ol'ZACHY-BOIS PIZZA</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ol'ZACHY-BOIS<span>PIZZA</span></h1>
+      <h2>BKLN<span>NY</span></h2>
+      <img class ="center" src="img/zach.JPG" alt="zach">
+      <button id="zah" type="submit"><span>ORDER SOME ZAH</span></button>
+      <form id="pizza">
+        <div class="col-md-4">
+          <p><span>Crust Option</span></p>
           <div class="form-group">
             <input type="radio" name="crust" value="glutenFree"> Gluten-Free Crust<br>
             <input type="radio" name="crust" value="handTossed"> Hand Tossed <br>
-          <!-- having hand tossed might create error message if both selected -->
           </div>
         </div>
         <div class="col-md-4">
@@ -41,44 +40,42 @@
               <input type="radio" name="base" value="pesto"> Pesto basil<br>
               <input type="radio" name="base" value="oil"> Oil and garlic<br>
             </div>
+        </div>
+        <div class="col-md-4">
+          <p><span>Select a cheese</span></p>
+          <div class="form-group">
+            <input type="radio" name="cheese" value="vegan"> Vegan cheese<br>
+            <input type="radio" name="cheese" value="mozzarella"> Mozzarella cheese<br>
+            <input type="radio" name="cheese" value="noCheese"> No Cheese<br>
           </div>
-          <div class="col-md-4">
-            <p><span>Select a cheese</span></p>
-              <div class="form-group">
-                <input type="radio" name="cheese" value="vegan"> Vegan cheese<br>
-                <input type="radio" name="cheese" value="mozzarella"> Mozzarella cheese<br>
-                <input type="radio" name="cheese" value="noCheese"> No Cheese<br>
-              </div>
+        </div>
+        <div class="col-md-4">
+          <p><span>Select toppings (additional charges may apply)</span></p>
+            <div class="form-group">
+              <input type="checkbox" name="topping" value=" pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="topping" value=" ham"> Ham<br>
+              <input type="checkbox" name="topping" value=" ground beef"> Ground beef<br>
+              <input type="checkbox" name="topping" value=" sausage"> Italian Sausage<br>
+              <input type="checkbox" name="topping" value=" bacon"> Bacon<br>
+              <input type="checkbox" name="topping" value=" anchovie"> Anchovies<br>
+              <input type="checkbox" name="topping" value=" pineapple"> Pineapple<br>
+              <input type="checkbox" name="topping" value=" onion"> Onion<br>
+              <input type="checkbox" name="topping" value=" green pepper"> Green Peppers<br>
+              <input type="checkbox" name="topping" value=" olive"> Black olives<br>
+              <input type="checkbox" name="topping" value=" mushroom"> Mushrooms<br>
+              <input type="checkbox" name="topping" value=" jalapenos"> Jalapenos<br>
             </div>
-            <div class="col-md-4">
-              <p><span>Select toppings (additional charges may apply)</span></p>
-                <div class="form-group">
-                  <input type="checkbox" name="topping" value=" pepperoni"> Pepperoni<br>
-                  <input type="checkbox" name="topping" value=" ham"> Ham<br>
-                  <input type="checkbox" name="topping" value=" ground beef"> Ground beef<br>
-                  <input type="checkbox" name="topping" value=" sausage"> Italian Sausage<br>
-                  <input type="checkbox" name="topping" value=" bacon"> Bacon<br>
-                  <input type="checkbox" name="topping" value=" anchovie"> Anchovies<br>
-                    <div class="right">
-                      <input type="checkbox" name="topping" value=" pineapple"> Pineapple<br>
-                      <input type="checkbox" name="topping" value=" onion"> Onion<br>
-                      <input type="checkbox" name="topping" value=" green pepper"> Green Peppers<br>
-                      <input type="checkbox" name="topping" value=" olive"> Black olives<br>
-                      <input type="checkbox" name="topping" value=" mushroom"> Mushrooms<br>
-                      <input type="checkbox" name="topping" value=" jalapenos"> Jalapenos<br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-              <p><span>Select a deliver/pickup method</span></p>
-                <div class="form-group">
-                  <input type="radio" name="select-method" value="deivery"> Delivery<br>
-                  <input type="radio" name="select-method" value="pick up"> Pick-up<br>
-                </div>
-            </div>
-      <button type="submit"><span>Place Order</span> </button>
-      <!-- end form element below -->
-    </form>
+        </div>
+        <div class="col-md-4">
+          <p><span>Select a deliver/pickup method</span></p>
+          <div class="form-group">
+            <input type="radio" name="select-method" value="deivery"> Delivery<br>
+            <input type="radio" name="select-method" value="pick up"> Pick-up<br>
+          </div>
+        </div>
+        <button type="submit"><span>Place Order</span> </button>
+        <!-- end form element below -->
+      </form>
       <div id="output">
         <div class="col-md-12">
           <p id="yourOrder">Your Order: </p>
@@ -87,7 +84,7 @@
           </div>
         </div>
       </div>
-    <!-- end container class below -->
-  </div>
-</body>
+      <!-- end container class below -->
+    </div>
+  </body>
 </html>
