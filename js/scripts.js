@@ -62,7 +62,7 @@ $(document).ready(function(){
     $("#pizza").toggle();
     $("#output").show();
     var myPizza = generateOrder();
-    $('#order').append(`<p>Size: ${myPizza.size}</p>`).append( `<p>Crust: ${myPizza.crust}</p>`).append(`<p>Base: ${myPizza.base}</p>`).append(`<p>Cheese: ${myPizza.cheese}</p>`).append(`<p>Toppings: ${myPizza.toppings}</p>`).append(`<p>Method: ${myPizza.method}</p>`).append(`</p>Order Total: ${myPizza.price}<p>`)
+    $('#order').append(`<p><span>Size:</span> ${myPizza.size}</p>`).append( `<p><span>Crust:</span> ${myPizza.crust}</p>`).append(`<p><span>Base:</span> ${myPizza.base}</p>`).append(`<p><span>Cheese:</span> ${myPizza.cheese}</p>`).append(`<p><span>Toppings:</span> ${myPizza.toppings}</p>`).append(`<p><span>Method:</span> ${myPizza.method}</p>`).append(`</p><span>Order Total:</span> ${myPizza.price}<p>`)
     $("#order").text();
     });
   });
