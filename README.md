@@ -20,23 +20,26 @@ There are links to google fonts in the header.
 
 ## Specs
 * User selects a pizza size from menu
-  * input: Sm
-  * output: Sm pizza
-* User selects a crust option
-  * input/output: Gluten Free
-* User selects a base option
-  * input/output: pesto
-* User selects a cheese from menu, selection is added to the pizza
-  * input: cheese 
-  * output: Sm gluten free pesto cheese
-* User selects additional toppings from menu, selection is added to the pizza
-  * input: pepperoni
-  * output: Sm gluten free pesto cheese pepperoni
-* User selects Delivery or Pickup method
-  * input/output: delivery
-* User selects to place an order and order is read back by submit function
-  * input: (select) Place Order
-  * output: Order is read back
+  * input: user clicks radio button for pizza size: sm
+  * output: starts to build myPizza beginning with sm adding a base price. 
+* User selects a crust option from radio button selector
+  * input: user clicks gluten free
+  * output: gluten free is added to myPizza and price is increased based on selection
+* User selects a base option by selecting radio button option
+  * input: user selects pesto
+  * output: pesto is added as base to myPizza, nothing is added to myPizza price
+* User selects a cheese from radio button
+  * input: user selects vegan cheese 
+  * output: vegan cheese is added to myPizza, nothing additional is added to myPizza price
+* User selects toppings from menu from a checkbox list, can select multiple toppings
+  * input: user selects pepperoni, pineapple, and ham
+  * output: the selected toppings are sent to myPizza, this 1 to price per legnth of the array, this example would add 3 to price.
+* User selects Delivery or Pickup method from radio list
+  * input: user selects Pick-up
+  * output: price or myPizza not affected. Once order is submitted output of decision is listed for user to see. 
+* User selects to place an order - order is read back by submit function
+  * input: user clicks Place Order
+  * output: full order of myPizza including adjusted price is displayed 
   
 ## Known Bugs
 

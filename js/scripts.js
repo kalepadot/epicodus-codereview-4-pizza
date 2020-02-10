@@ -1,32 +1,31 @@
 // Business Logic
 
-function Pizza(size, crust, base, cheese, toppings, method, price) {
+function Pizza(size, crust, base, cheese, toppings, method) {
   this.size = size;
   this.crust = crust;
   this.base = base;
   this.cheese = cheese;
   this.toppings = toppings;
   this.method = method;
-  this.price = price;
+  this.price = 0;
   console.log(this);
 }
 Pizza.prototype.getPrice = function() {
-  var addCharge = 0;
   if (this.size === "sm") {
-    addCharge = 10;
+    this.price = 10;
   } else if (this.size === "md") {
-    addCharge = 12;
+    this.price = 12;
   } else if (this.size === "lg") {
-    addCharge = 14;
+    this.price = 14;
   };
   if (this.crust === "glutenFree") {
-    addCharge += 2;
+    this.price += 2;
   } else if (this.crust === "handtossed") {
-    addCharge +=1;
+    this.price +=1;
   }
-  addCharge += this.toppings.length;
+  this.price += this.toppings.length;
   console.log(this.toppings.length);
-  return addCharge;
+  return this.price;
 };
 
 function generateOrder() {
@@ -37,11 +36,10 @@ function generateOrder() {
   var method = $("input[name=select-method]:checked").val();
   var toppings = []
   $("input[name=topping]:checked").each(function() {
-  toppings.push($(this).val());
-
+    toppings.push($(this).val());
   });
-  var myPizza = new Pizza(size, crust, base, cheese, toppings, method, price);
-  myPizza.getPrice(); //?
+  var myPizza = new Pizza(size, crust, base, cheese, toppings, method);
+  myPizza.getPrice();
   var price = myPizza.getPrice();
   console.log(price);
   return myPizza;
@@ -60,7 +58,7 @@ $(document).ready(function(){
     $("#pizza").toggle();
     $("#output").show();
     var myPizza = generateOrder();
-    $('#order').append(`<p><span>Size:</span> ${myPizza.size}</p>`).append( `<p><span>Crust:</span> ${myPizza.crust}</p>`).append(`<p><span>Base:</span> ${myPizza.base}</p>`).append(`<p><span>Cheese:</span> ${myPizza.cheese}</p>`).append(`<p><span>Toppings:</span> ${myPizza.toppings}</p>`).append(`<p><span>Method:</span> ${myPizza.method}</p>`).append(`</p><span>Order Total:</span>$ ${myPizza.getPrice()}<p>`)
+    $('#order').append(`<p><span>Size:</span> ${myPizza.size}</p>`).append( `<p><span>Crust:</span> ${myPizza.crust}</p>`).append(`<p><span>Base:</span> ${myPizza.base}</p>`).append(`<p><span>Cheese:</span> ${myPizza.cheese}</p>`).append(`<p><span>Toppings:</span> ${myPizza.toppings}</p>`).append(`<p><span>Method:</span> ${myPizza.method}</p>`).append(`</p><span>Order Total:</span>$ ${myPizza.price}<p>`)
     $("#order").text();
     });
   });
